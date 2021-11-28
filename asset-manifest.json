@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/mc-frontend-tech-test/static/css/main.d9d54c00.chunk.css",
+    "main.js": "/mc-frontend-tech-test/static/js/main.57b3ae42.chunk.js",
+    "main.js.map": "/mc-frontend-tech-test/static/js/main.57b3ae42.chunk.js.map",
+    "runtime-main.js": "/mc-frontend-tech-test/static/js/runtime-main.9457bd14.js",
+    "runtime-main.js.map": "/mc-frontend-tech-test/static/js/runtime-main.9457bd14.js.map",
+    "static/js/2.08cf1af8.chunk.js": "/mc-frontend-tech-test/static/js/2.08cf1af8.chunk.js",
+    "static/js/2.08cf1af8.chunk.js.map": "/mc-frontend-tech-test/static/js/2.08cf1af8.chunk.js.map",
+    "static/js/3.5e1a618e.chunk.js": "/mc-frontend-tech-test/static/js/3.5e1a618e.chunk.js",
+    "static/js/3.5e1a618e.chunk.js.map": "/mc-frontend-tech-test/static/js/3.5e1a618e.chunk.js.map",
+    "index.html": "/mc-frontend-tech-test/index.html",
+    "static/css/main.d9d54c00.chunk.css.map": "/mc-frontend-tech-test/static/css/main.d9d54c00.chunk.css.map",
+    "static/js/2.08cf1af8.chunk.js.LICENSE.txt": "/mc-frontend-tech-test/static/js/2.08cf1af8.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9457bd14.js",
+    "static/js/2.08cf1af8.chunk.js",
+    "static/css/main.d9d54c00.chunk.css",
+    "static/js/main.57b3ae42.chunk.js"
+  ]
+}
