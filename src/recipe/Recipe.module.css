@@ -1,0 +1,24 @@
+.recipe {
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    outline: 2px solid lightgrey;
+}
+.recipe:hover {
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+.recipe img {
+    width: 100%;
+}
+.title {
+    padding: 15px;
+    color: darkorange;
+    font-weight: bold;
+    font-size: large;
+}
+.description {
+    padding: 15px;
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Pestorissa chickpea, avocado & rice salad",
+    "description": "Talk about eye-popping colours! Vibrant red tomatoes, green avocado and golden chickpeas – tossed in herby pestorissa – star in this nutrient-dense salad. Drizzled with pomegranate molasses, it’s ready in just 10 minutes, too.",
+    "image": "https://mindfulchef.imgix.net/recipes/1150/ae14a7ac2923dccb5be996b372feabe5?auto=format&ar=22%3A15&fit=crop&q=85&w=640",
+    "protein": ["vegan"]
+  },
+  {
+    "title": "Spanish cod, chickpeas & roasted peppers",
+    "description": "Fresh yet filling, this easy dish is perfect for busy weeknights. Sustainably sourced cod – dressed with fresh lemon zest – is baked then plated over a warming Spanish-style chickpea stew, sweetened with roasted red pepper. This recipe has been approved by British Heart Foundation dietitians, helping to support heart and circulatory health.",
+    "image": "https://mindfulchef.imgix.net/recipes/489/d6c31e682684d177a9acb03d19ace67b?auto=format&ar=22%3A15&fit=crop&q=85&w=594",
+    "protein": ["fish"]
+  },
+  {
+    "title": "Caribbean-style turkey & charred corn salsa",
+    "description": "A holiday on a plate! Free-range, jerk-spiced British free-range turkey breast, charred sweetcorn and a zippy lime salsa pair deliciously with crisp little gem, juicy baby plum tomatoes and generous slices of avocado.",
+    "image": "https://mindfulchef.imgix.net/recipes/1682/46c18266e7b0ca27877936056e82c041.jpg?auto=format&ar=22%3A15&fit=crop&q=85&w=640",
+    "protein": ["meat"]
+  },
+  {
+    "title": "Steak with chermoula lentil & tomato salad",
+    "description": "Travel the world from your kitchen – even when you’re short on time. North African chermoula paste, stewed with lentils, is the base for enticingly pink, grass-fed British flat iron steaks. Rocket salad adds fibre.",
+    "image": "https://mindfulchef.imgix.net/recipes/1156/485c3c00e2dfceaec3c701538688bf24.jpg?auto=format&ar=22%3A15&fit=crop&q=85&w=640",
+    "protein": ["meat"]
+  },
+  {
+    "title": "Verbena harissa tofu & turmeric rice",
+    "description": "Citrussy, green and mildly spiced, we’re addicted to Belazu’s punchy verbena harissa. Here we toss it with tofu and coconut yoghurt to create an innovative curry, and serve over golden turmeric and cumin rice.",
+    "image": "https://mindfulchef.imgix.net/recipes/544/03fd836f895fecfdc41ff48b75f5c988?auto=format&ar=22%3A15&fit=crop&q=85&w=640",
+    "protein": ["vegan"]
+  }
+]

@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200&display=swap');
+
+.app {
+  text-align: center;
+  font-family: 'Montserrat', 'Courier New', sans-serif;
+}
+.header {
+  color: rebeccapurple;
+  border-bottom: 1px solid lightgrey;
+  margin-bottom: 30px;
+  font-weight: bolder;
+}
+.recipesList {
+  width: 90%;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-between;
+  grid-gap: 40px;
+}
+
+@media screen and (max-width: 770px) {
+  .recipesList {width: 100%; grid-template-columns: 1fr 1fr}
+}
+@media screen and (max-width: 450px) {
+  .recipesList {grid-template-columns: 1fr}
+
+}
+
+
