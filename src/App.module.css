@@ -54,7 +54,9 @@
 }
 .modalCont {
   width: 700px;
-  height: 500px;
+  min-height: 500px;
+  max-height: 100vh;
+  overflow-y: auto;
   background-color: #fff;
   outline: 2px solid lightgrey;
   position: relative;
@@ -141,7 +143,7 @@
 /*responsive*/
 @media screen and (max-width: 800px) {
   .recipesList {width: 100%; grid-template-columns: 1fr 1fr}
-  .modal{height: 100vh; overflow-y: auto; background-color: #fff }
+  .modal{height: 100vh; background-color: #fff }
   .modalCont {flex-direction: column; height: 100vh; width: 100%;outline: none}
   .modalCont img {width: 100%}
   .modal button {position: fixed;bottom: 0; width: 100%}
