@@ -1,8 +1,8 @@
 .recipe {
-    height: 550px;
+    min-height: 550px;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     outline: 2px solid lightgrey;
 }
@@ -13,10 +13,17 @@
 .recipe img {
     width: 100%;
 }
+.recipe> :last-child {
+    margin-top: auto;
+}
 .title {
     padding: 15px;
     color: darkorange;
     font-weight: bold;
     font-size: large;
 }
+.description {
+    padding: 0 15px 15px;
+}
+
 

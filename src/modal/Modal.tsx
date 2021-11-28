@@ -1,8 +1,7 @@
 import React from 'react';
 import s from '../App.module.css'
 
-export const Modal = ({title, description, image, onClose}: ModalPropsType) => {
-
+export const Modal = ({title, description, image, onClose, addToCart}: ModalPropsType) => {
     return (
         <div className={s.modal} onClick={onClose}>
             <div className={s.modalCont} onClick={e => e.stopPropagation()}>
@@ -13,6 +12,7 @@ export const Modal = ({title, description, image, onClose}: ModalPropsType) => {
                 <div className={s.modalDescriptionCont}>
                     <div className={s.modalTitle}>{title}</div>
                     <div className={s.modalDescription}>{description}</div>
+                    <button onClick={addToCart}>ADD RECIPE</button>
                 </div>
             </div>
         </div>
@@ -25,4 +25,5 @@ type ModalPropsType = {
     description: string
     image: string
     onClose: () => void
+    addToCart: () => void
 }

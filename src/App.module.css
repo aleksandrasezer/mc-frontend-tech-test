@@ -4,6 +4,29 @@
   text-align: center;
   font-family: 'Montserrat', 'Courier New', sans-serif;
 }
+.app button {
+  background-color: darkorange;
+  height: 40px;
+  color: rgba(255,255,255,0.8);
+  font-weight: bold;
+  border-top: 2px solid rgba(244,179,80,1);
+  border-left: 2px solid rgba(244,179,80,1);
+  border-right: 2px solid rgba(232,126,4,1);
+  border-bottom: 2px solid rgba(232,126,4,1);
+}
+.app button:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: rgba(232,126,4,1);
+}
+.app button:active {
+  cursor: pointer;
+  color: #fff;
+  border-top: 2px solid rgba(232,126,4,1);
+  border-left: 2px solid rgba(232,126,4,1);
+  border-right: 2px solid rgba(244,179,80,1);
+  border-bottom: 2px solid rgba(244,179,80,1);
+}
 .header {
   color: rebeccapurple;
   border-bottom: 1px solid lightgrey;
@@ -31,7 +54,7 @@
 }
 .modalCont {
   width: 700px;
-  height: 450px;
+  height: 500px;
   background-color: #fff;
   outline: 2px solid lightgrey;
   position: relative;
@@ -39,7 +62,11 @@
   flex-direction: row;
 }
 .modalDescriptionCont {
-
+  display: flex;
+  flex-direction: column;
+}
+.modalDescriptionCont> :last-child {
+  margin-top: auto;
 }
 .modalTitle {
   padding: 25px;
@@ -48,7 +75,7 @@
   font-size: x-large;
 }
 .modalDescription {
-  padding: 25px;
+  padding: 0 25px;
   font-size: large;
 }
 .modalCont img {
@@ -86,14 +113,44 @@
   transform: rotate(-45deg);
 }
 
+/*cart*/
+.cart {
+  position: fixed;
+  right: 5px;
+  bottom: 5px;
+  background-color: rgba(255,255,255,1);
+  border: 1px solid grey;
+  height: 70px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cartCount {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.cartCount> :first-child {
+  line-height: 50px;
+  font-weight: bolder;
+}
+.cartCount img {
+  height: 50px;
+}
 
-@media screen and (max-width: 770px) {
+/*responsive*/
+@media screen and (max-width: 800px) {
   .recipesList {width: 100%; grid-template-columns: 1fr 1fr}
-  .modalCont {flex-direction: column; height: 100%}
+  .modal{height: 100vh; overflow-y: auto; background-color: #fff }
+  .modalCont {flex-direction: column; height: 100vh; width: 100%;outline: none}
   .modalCont img {width: 100%}
+  .modal button {position: fixed;bottom: 0; width: 100%}
+  .modalDescription{padding-bottom: 40px}
+  .recipesList {grid-gap: 20px}
 }
 @media screen and (max-width: 450px) {
   .recipesList {grid-template-columns: 1fr}
+  .cart {width: 100%; right: -1px;bottom: 0}
 }
 
 
