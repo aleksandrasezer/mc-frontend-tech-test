@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/mc-frontend-tech-test/static/css/main.d9d54c00.chunk.css",
-    "main.js": "/mc-frontend-tech-test/static/js/main.57b3ae42.chunk.js",
-    "main.js.map": "/mc-frontend-tech-test/static/js/main.57b3ae42.chunk.js.map",
-    "runtime-main.js": "/mc-frontend-tech-test/static/js/runtime-main.9457bd14.js",
-    "runtime-main.js.map": "/mc-frontend-tech-test/static/js/runtime-main.9457bd14.js.map",
-    "static/js/2.08cf1af8.chunk.js": "/mc-frontend-tech-test/static/js/2.08cf1af8.chunk.js",
-    "static/js/2.08cf1af8.chunk.js.map": "/mc-frontend-tech-test/static/js/2.08cf1af8.chunk.js.map",
-    "static/js/3.5e1a618e.chunk.js": "/mc-frontend-tech-test/static/js/3.5e1a618e.chunk.js",
-    "static/js/3.5e1a618e.chunk.js.map": "/mc-frontend-tech-test/static/js/3.5e1a618e.chunk.js.map",
+    "main.css": "/mc-frontend-tech-test/static/css/main.5237ffd1.chunk.css",
+    "main.js": "/mc-frontend-tech-test/static/js/main.c3db2a10.chunk.js",
+    "main.js.map": "/mc-frontend-tech-test/static/js/main.c3db2a10.chunk.js.map",
+    "runtime-main.js": "/mc-frontend-tech-test/static/js/runtime-main.6f84698a.js",
+    "runtime-main.js.map": "/mc-frontend-tech-test/static/js/runtime-main.6f84698a.js.map",
+    "static/js/2.7e9237fd.chunk.js": "/mc-frontend-tech-test/static/js/2.7e9237fd.chunk.js",
+    "static/js/2.7e9237fd.chunk.js.map": "/mc-frontend-tech-test/static/js/2.7e9237fd.chunk.js.map",
+    "static/js/3.7580ad17.chunk.js": "/mc-frontend-tech-test/static/js/3.7580ad17.chunk.js",
+    "static/js/3.7580ad17.chunk.js.map": "/mc-frontend-tech-test/static/js/3.7580ad17.chunk.js.map",
     "index.html": "/mc-frontend-tech-test/index.html",
-    "static/css/main.d9d54c00.chunk.css.map": "/mc-frontend-tech-test/static/css/main.d9d54c00.chunk.css.map",
-    "static/js/2.08cf1af8.chunk.js.LICENSE.txt": "/mc-frontend-tech-test/static/js/2.08cf1af8.chunk.js.LICENSE.txt"
+    "static/css/main.5237ffd1.chunk.css.map": "/mc-frontend-tech-test/static/css/main.5237ffd1.chunk.css.map",
+    "static/js/2.7e9237fd.chunk.js.LICENSE.txt": "/mc-frontend-tech-test/static/js/2.7e9237fd.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.9457bd14.js",
-    "static/js/2.08cf1af8.chunk.js",
-    "static/css/main.d9d54c00.chunk.css",
-    "static/js/main.57b3ae42.chunk.js"
+    "static/js/runtime-main.6f84698a.js",
+    "static/js/2.7e9237fd.chunk.js",
+    "static/css/main.5237ffd1.chunk.css",
+    "static/js/main.c3db2a10.chunk.js"
   ]
 }
