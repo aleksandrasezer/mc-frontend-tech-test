@@ -5,18 +5,28 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select, {SelectChangeEvent} from '@mui/material/Select';
 import {Box} from "@mui/material";
-import {Recipe} from "./recipe/Recipe";
+import {Recipe, RecipeType} from "./recipe/Recipe";
+import {Modal} from "./modal/Modal";
 
 function App() {
 
     const [proteinType, setProteinType] = useState<ProteinType>('all')
+    const [showModal, setShowModal] = useState<boolean>(false)
+    const [modalProps, setModalProps] = useState<RecipeType>({title: '', description: '', image: '', protein: ['']})
 
     let recipesToDisplay
     switch (proteinType) {
-        case ('vegan'): recipesToDisplay = recipes.filter(r => r.protein.some(p => p === 'vegan')); break
-        case ('pesc'): recipesToDisplay = recipes.filter(r => r.protein.some(p => p === 'fish') && r.protein.length === 1); break
-        case ('meatAndFish'): recipesToDisplay = recipes.filter(r => r.protein.some(p => p === 'meat' || p === 'fish')); break
-        case ('all'): recipesToDisplay = recipes
+        case ('vegan'):
+            recipesToDisplay = recipes.filter(r => r.protein.some(p => p === 'vegan'));
+            break
+        case ('pesc'):
+            recipesToDisplay = recipes.filter(r => r.protein.some(p => p === 'fish') && r.protein.length === 1);
+            break
+        case ('meatAndFish'):
+            recipesToDisplay = recipes.filter(r => r.protein.some(p => p === 'meat' || p === 'fish'));
+            break
+        case ('all'):
+            recipesToDisplay = recipes
     }
 
     const handleChange = (event: SelectChangeEvent) => {
@@ -25,6 +35,11 @@ function App() {
 
     return (
         <div className={s.app}>
+
+            {showModal && <Modal title={modalProps.title}
+                                 description={modalProps.description}
+                                 image={modalProps.image}
+                                 onClose={() => setShowModal(false)}/>}
 
             <div className={s.header}><h1>Explore our healthy recipes</h1></div>
             <div>
@@ -46,10 +61,11 @@ function App() {
             </div>
 
             <div className={s.recipesList}>
-                {recipesToDisplay && recipesToDisplay.map((r,i) => <Recipe key={i} title={r.title}
-                                                       description={r.description}
-                                                       image={r.image}
-                                                       protein={r.protein} />)}
+                {recipesToDisplay && recipesToDisplay.map((r, i) => <Recipe key={i} title={r.title}
+                                                                            description={r.description}
+                                                                            image={r.image}
+                                                                            protein={r.protein}
+                                                                            onRecipeClick={() => {setModalProps(r);setShowModal(true)}}/>)}
             </div>
         </div>
     );
