@@ -1,17 +1,21 @@
 import React, {useState} from 'react';
-import s from './App.module.css'
+import classesApp from './App.module.css'
 import recipes from './data/recipes.json'
-import {Recipe, RecipeType} from "./recipe/Recipe";
-import {Modal} from "./modal/Modal";
+import {Recipe, RecipeType} from "./components/recipe/Recipe";
+import {RecipeModal} from "./components/recipeModal/RecipeModal";
 import {SelectProtein} from "./select/SelectProtein";
-import {Cart} from "./cart/Cart";
+import {Cart} from "./components/cart/Cart";
+import {CartModal} from "./components/cartModal/CartModal";
 
 function App() {
 
     const [proteinType, setProteinType] = useState<ProteinType>('all')
-    const [showModal, setShowModal] = useState<boolean>(false)
+    const [showRecipeModal, setShowRecipeModal] = useState<boolean>(false)
     const [modalProps, setModalProps] = useState<RecipeType>({title: '', description: '', image: '', protein: ['']})
     const [cartCount, setCartCount] = useState<number>(0)
+    const [showCartModal, setShowCartModal] = useState<boolean>(false)
+    const [cartItems, setCartItems] = useState<string[]>([])
+
 
     let recipesToDisplay
     switch (proteinType) {
@@ -31,30 +35,40 @@ function App() {
     const setProtein = (proteinType: ProteinType) => {
         setProteinType(proteinType)
     }
-    const addToCart = () => {
+    const addToCart = (itemTitle: string) => {
         setCartCount(count => count + 1)
+        setCartItems(prevState => [...prevState,itemTitle])
+    }
+    const emptyCart = () => {
+        setCartCount(0)
+        setCartItems([])
     }
 
     return (
-        <div className={s.app}>
+        <div className={classesApp.app}>
 
-            {showModal && <Modal title={modalProps.title}
-                                 description={modalProps.description}
-                                 image={modalProps.image}
-                                 onClose={() => setShowModal(false)}
-                                 addToCart={addToCart}/>}
+            {showRecipeModal && <RecipeModal title={modalProps.title}
+                                       description={modalProps.description}
+                                       image={modalProps.image}
+                                       onClose={() => setShowRecipeModal(false)}
+                                       addToCart={addToCart}/>}
+            {showCartModal && <CartModal cartCount={cartCount}
+                                         emptyCart={emptyCart}
+                                         cartItems={cartItems}
+                                         onClose={() => setShowCartModal(false)}/>}
 
-            <div className={s.header}><h1>Explore our healthy recipes</h1></div>
+            <div className={classesApp.header}><h1>Explore our healthy recipes</h1></div>
             <SelectProtein proteinType={proteinType} handleChane={setProtein}/>
-            <div className={s.recipesList}>
-                {recipesToDisplay && recipesToDisplay.map((r, i) => <Recipe key={i} title={r.title}
+            <div className={classesApp.recipesList}>
+                {recipesToDisplay && recipesToDisplay.map((r, i) => <Recipe key={i}
+                                                                            title={r.title}
                                                                             description={r.description}
                                                                             image={r.image}
                                                                             protein={r.protein}
-                                                                            onRecipeClick={() => {setModalProps(r);setShowModal(true)}}
+                                                                            onRecipeClick={() => {setModalProps(r);setShowRecipeModal(true)}}
                                                                             addToCart={addToCart}/>)}
             </div>
-            <Cart cartCount={cartCount}/>
+            <div onClick={() => setShowCartModal(true)} style={{cursor:'pointer'}}><Cart cartCount={cartCount} /></div>
         </div>
     );
 }

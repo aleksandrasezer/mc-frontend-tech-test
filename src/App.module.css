@@ -1,158 +1,214 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200&display=swap');
 
 .app {
-  text-align: center;
-  font-family: 'Montserrat', 'Courier New', sans-serif;
-}
-.app button {
-  background-color: darkorange;
-  height: 40px;
-  color: rgba(255,255,255,0.8);
-  font-weight: bold;
-  border-top: 2px solid rgba(244,179,80,1);
-  border-left: 2px solid rgba(244,179,80,1);
-  border-right: 2px solid rgba(232,126,4,1);
-  border-bottom: 2px solid rgba(232,126,4,1);
-}
-.app button:hover {
-  cursor: pointer;
-  color: #fff;
-  background-color: rgba(232,126,4,1);
-}
-.app button:active {
-  cursor: pointer;
-  color: #fff;
-  border-top: 2px solid rgba(232,126,4,1);
-  border-left: 2px solid rgba(232,126,4,1);
-  border-right: 2px solid rgba(244,179,80,1);
-  border-bottom: 2px solid rgba(244,179,80,1);
-}
-.header {
-  color: rebeccapurple;
-  border-bottom: 1px solid lightgrey;
-  margin-bottom: 30px;
-  font-weight: bolder;
-}
-.recipesList {
-  width: 90%;
-  margin: 30px auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-content: space-between;
-  grid-gap: 40px;
+    font-family: 'Montserrat', 'Courier New', sans-serif;
+    text-align: center;
 }
 
-/*modal window*/
+.app button {
+    background-color: darkorange;
+    border-top: 2px solid rgba(244, 179, 80, 1);
+    border-right: 2px solid rgba(232, 126, 4, 1);
+    border-bottom: 2px solid rgba(232, 126, 4, 1);
+    border-left: 2px solid rgba(244, 179, 80, 1);
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: bold;
+    height: 40px;
+}
+
+.app button:hover {
+    background-color: rgba(232, 126, 4, 1);
+    color: #fff;
+    cursor: pointer;
+}
+
+.app button:active {
+    border-top: 2px solid rgba(232, 126, 4, 1);
+    border-left: 2px solid rgba(232, 126, 4, 1);
+    border-right: 2px solid rgba(244, 179, 80, 1);
+    border-bottom: 2px solid rgba(244, 179, 80, 1);
+    color: #fff;
+    cursor: pointer;
+}
+
+.header {
+    border-bottom: 1px solid lightgrey;
+    color: rebeccapurple;
+    font-weight: bolder;
+    margin-bottom: 30px;
+}
+
+.recipesList {
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+    margin: 30px auto;
+    width: 90%;
+}
+
+/*recipeModal window*/
 .modal {
-  position: fixed;
-  top:0;bottom:0;left:0;right:0;
-  background-color: rgba(228,233,237,0.7);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1;
+    align-items: center;
+    background-color: rgba(228, 233, 237, 0.7);
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1;
 }
+
 .modalCont {
-  width: 700px;
-  min-height: 500px;
-  max-height: 100vh;
-  overflow-y: auto;
-  background-color: #fff;
-  outline: 2px solid lightgrey;
-  position: relative;
-  display: flex;
-  flex-direction: row;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    max-height: 100vh;
+    min-height: 500px;
+    outline: 2px solid lightgrey;
+    overflow-y: auto;
+    position: relative;
+    width: 700px;
 }
+
 .modalDescriptionCont {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
-.modalDescriptionCont> :last-child {
-  margin-top: auto;
+
+.modalDescriptionCont > :last-child {
+    margin-top: auto;
 }
+
 .modalTitle {
-  padding: 25px;
-  color: darkorange;
-  font-weight: bold;
-  font-size: x-large;
+    color: darkorange;
+    font-size: large;
+    font-weight: bold;
+    padding: 15px;
 }
+
 .modalDescription {
-  padding: 0 25px;
-  font-size: large;
+    font-size: large;
+    padding: 0 25px 10px;
 }
+
 .modalCont img {
-  height: 100%;
-  width: 350px;
-  object-fit: cover;
+    height: 100%;
+    object-fit: cover;
+    width: 350px;
 }
 
 /*close icon*/
 .close {
-  position: absolute;
-  right: 20px;
-  top: 10px;
-  width: 20px;
-  height: 20px;
-  opacity: 0.3;
+    height: 20px;
+    opacity: 0.3;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    width: 20px;
 
 }
+
 .close:hover {
-  opacity: 1;
-  cursor: pointer;
+    cursor: pointer;
+    opacity: 1;
 }
+
 .close:before, .close:after {
-  position: absolute;
-  left: 15px;
-  content: ' ';
-  height: 33px;
-  width: 2px;
-  background-color: #333;
+    background-color: #333;
+    content: ' ';
+    height: 33px;
+    left: 15px;
+    position: absolute;
+    width: 2px;
 }
+
 .close:before {
-  transform: rotate(45deg);
+    transform: rotate(45deg);
 }
+
 .close:after {
-  transform: rotate(-45deg);
+    transform: rotate(-45deg);
 }
 
 /*cart*/
 .cart {
-  position: fixed;
-  right: 5px;
-  bottom: 5px;
-  background-color: rgba(255,255,255,1);
-  border: 1px solid grey;
-  height: 70px;
-  width: 250px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid grey;
+    bottom: 5px;
+    display: flex;
+    height: 70px;
+    justify-content: center;
+    position: fixed;
+    right: 5px;
+    width: 250px;
 }
+
 .cartCount {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
-.cartCount> :first-child {
-  line-height: 50px;
-  font-weight: bolder;
+
+.cartCount > :first-child {
+    font-weight: bolder;
+    line-height: 50px;
 }
+
 .cartCount img {
-  height: 50px;
+    height: 50px;
 }
 
 /*responsive*/
 @media screen and (max-width: 800px) {
-  .recipesList {width: 100%; grid-template-columns: 1fr 1fr}
-  .modal{height: 100vh; background-color: #fff }
-  .modalCont {flex-direction: column; height: 100vh; width: 100%;outline: none}
-  .modalCont img {width: 100%}
-  .modal button {position: fixed;bottom: 0; width: 100%}
-  .modalDescription{padding-bottom: 40px}
-  .recipesList {grid-gap: 20px}
+    .recipesList {
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+    }
+
+    .modal {
+        background-color: #fff;
+        height: 100vh;
+    }
+
+    .modalCont {
+        flex-direction: column;
+        height: 100vh;
+        outline: none;
+        width: 100%;
+    }
+
+    .modalCont img {
+        width: 100%
+    }
+
+    .modal button {
+        bottom: 0;
+        position: fixed;
+        width: 100%
+    }
+
+    .modalDescription {
+        padding-bottom: 40px
+    }
+
+    .recipesList {
+        grid-gap: 20px
+    }
 }
+
 @media screen and (max-width: 450px) {
-  .recipesList {grid-template-columns: 1fr}
-  .cart {width: 100%; right: -1px;bottom: 0}
+    .recipesList {
+        grid-template-columns: 1fr
+    }
+
+    .cart {
+        bottom: 0;
+        right: -1px;
+        width: 100%;
+    }
 }
 
 

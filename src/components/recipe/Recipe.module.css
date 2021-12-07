@@ -1,9 +1,9 @@
 .recipe {
-    min-height: 550px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    min-height: 550px;
     outline: 2px solid lightgrey;
 }
 .recipe:hover {
@@ -17,10 +17,9 @@
     margin-top: auto;
 }
 .title {
-    padding: 15px;
     color: darkorange;
     font-weight: bold;
-    font-size: large;
+    padding: 10px;
 }
 .description {
     padding: 0 15px 15px;
